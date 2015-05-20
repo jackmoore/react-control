@@ -1,7 +1,7 @@
 {
   "name": "react-control",
   "description": "An unstyled alternative to using `<button type='button'>`. ",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "keywords": [
     "react-component",
     "react"

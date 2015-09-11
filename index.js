@@ -14,7 +14,7 @@ module.exports = React.createClass({
 
 			var clickEvent = document.createEvent('MouseEvents');
 			clickEvent.initEvent('click', true, true);
-			React.findDOMNode(this).dispatchEvent(clickEvent);
+			this.refs.button.dispatchEvent(clickEvent);
 		}
 
 		if (this.props.onKeyDown && typeof this.props.onKeyDown === 'function') {
@@ -28,7 +28,7 @@ module.exports = React.createClass({
 
 			var clickEvent = document.createEvent('MouseEvents');
 			clickEvent.initEvent('click', true, true);
-			React.findDOMNode(this).dispatchEvent(clickEvent);
+			this.refs.button.dispatchEvent(clickEvent);
 		}
 
 		if (this.props.onKeyUp && typeof this.props.onKeyUp === 'function') {
@@ -42,6 +42,7 @@ module.exports = React.createClass({
 			props[key] = this.props[key];
 		}.bind(this));
 
+		props.ref = 'button';
 		props.role = 'button';
 		props.onKeyUp = this.handleKeyUp;
 		props.onKeyDown = this.handleKeyDown;

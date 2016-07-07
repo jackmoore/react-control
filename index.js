@@ -42,6 +42,7 @@ module.exports = React.createClass({
 			props[key] = this.props[key];
 		}.bind(this));
 
+		delete props.tag;
 		props.ref = 'button';
 		props.role = 'button';
 		props.onKeyUp = this.handleKeyUp;

@@ -48,6 +48,10 @@ module.exports = React.createClass({
 		props.onKeyUp = this.handleKeyUp;
 		props.onKeyDown = this.handleKeyDown;
 
+		if (props.disabled) {
+			delete props.tabIndex;
+		}
+
 		return React.createElement(this.props.tag, props);
 	},
 });
